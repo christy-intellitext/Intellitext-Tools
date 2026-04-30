@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intellitext Tools</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Comfortaa', sans-serif;
+    background: #dce4df;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 80px;
+  }
+
+  .logo {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto 12px;
+  }
+
+  .page-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c6a4d;
+    text-align: center;
+    letter-spacing: 0.01em;
+    margin-bottom: 6px;
+  }
+
+  .page-subtitle {
+    font-size: 13px;
+    color: #7a9a8a;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  @media (max-width: 700px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: #f5f8f6;
+    border: 1px solid #b5c0bb;
+    border-radius: 12px;
+    padding: 28px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: #2c6a4d;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+
+  .card:hover {
+    border-color: #2c6a4d;
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44,106,77,0.1);
+  }
+
+  .card:hover::before { opacity: 1; }
+
+  .card-icon {
+    width: 42px;
+    height: 42px;
+    background: #dce4df;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2c6a4d;
+    line-height: 1.3;
+  }
+
+  .card-desc {
+    font-size: 12px;
+    color: #7a9a8a;
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .card-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2c6a4d;
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .card-link::after {
+    content: '→';
+    transition: transform 0.12s;
+  }
+
+  .card:hover .card-link::after { transform: translateX(3px); }
+
+  footer {
+    margin-top: 56px;
+    font-size: 11px;
+    color: #7a9a8a;
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+
+  <img src="https://i.imgur.com/YkhiJRe.png" alt="Intellitext" class="logo">
+  <div class="page-title">Intellitext Tools</div>
+  <div class="page-subtitle">Internal tools for operations, scheduling, and transcription</div>
+
+  <div class="grid">
+
+    <a class="card" href="https://christy-intellitext.github.io/Intellitext-Portal/" target="_blank">
+      <div class="card-icon">📋</div>
+      <div class="card-title">Job Reporting Portal</div>
+      <div class="card-desc">Submit transcription job reports, upload transcripts, and log outcomes for attended, no-show, and late cancel shifts.</div>
+      <div class="card-link">Open tool</div>
+    </a>
+
+    <a class="card" href="https://christy-intellitext.github.io/Scheduling-Intake/" target="_blank">
+      <div class="card-icon">📅</div>
+      <div class="card-title">Schedule Intake</div>
+      <div class="card-desc">Process student schedules into master class list rows and WhenIWork job site names, with team type and billing note labeling.</div>
+      <div class="card-link">Open tool</div>
+    </a>
+
+    <a class="card" href="https://christy-intellitext.github.io/AppScript/" target="_blank">
+      <div class="card-icon">✂️</div>
+      <div class="card-title">ScriptFeed Line Splitter</div>
+      <div class="card-desc">Paste a transcript script, set your max line length, clean up formatting, and export a numbered Excel file ready for TypeWell.</div>
+      <div class="card-link">Open tool</div>
+    </a>
+
+  </div>
+
+  <footer>Authorized Use Only &mdash; Intellitext LLC 2026 &mdash; V 1.0</footer>
+
+</body>
+</html>
