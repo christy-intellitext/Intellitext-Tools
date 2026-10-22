@@ -62,7 +62,8 @@
     padding: 20px 20px 16px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 7px;
     text-decoration: none;
     color: inherit;
@@ -152,6 +153,41 @@
 
   .grid + .section-title { margin-top: 40px; }
 
+  .card-wide { grid-column: 1 / -1; }
+
+  .card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .card-btn {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1e3a5f;
+    text-decoration: none;
+    padding: 7px 14px;
+    border: 1px solid #d4dae6;
+    border-radius: 6px;
+    background: #f8f9fc;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.12s;
+  }
+
+  .card-btn::after { content: '→'; transition: transform 0.12s; }
+
+  .card-btn:hover {
+    background: #1e3a5f;
+    border-color: #1e3a5f;
+    color: #fff;
+  }
+
+  .card-btn:hover::after { transform: translateX(3px); }
+
   footer {
     margin-top: 48px;
     font-size: 11px;
@@ -198,6 +234,16 @@
       <div class="card-desc">Manage tasks, assignments, and operational workflows from the centralized admin dashboard.</div>
       <div class="card-link">Open</div>
     </a>
+
+    <div class="card card-wide">
+      <div class="card-icon">👋</div>
+      <div class="card-title">Onboarding</div>
+      <div class="card-desc">Intake forms for bringing on a new client or a new contractor.</div>
+      <div class="card-actions">
+        <a class="card-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSewWMrm7_Zt8lNPck2TunvTQUKBTtlH0MsYauzge6Zm8CUn9g/viewform" target="_blank">New Client</a>
+        <a class="card-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeJ8ulNuTaY0Hw3H60PaSwZpSxJ-C92zFRi3BWDAuEwYUxt2g/viewform" target="_blank">New Contractor</a>
+      </div>
+    </div>
 
   </div>
 
@@ -267,7 +313,7 @@
 
   </div>
 
-  <footer>Authorized Use Only &mdash; Intellitext LLC 2026 &mdash; V 1.6</footer>
+  <footer>Authorized Use Only &mdash; Intellitext LLC 2026 &mdash; V 1.8</footer>
 
 </body>
 </html>
